@@ -1,9 +1,4 @@
-/* 
-{
-    "topicId": 5,
-        "status": "published" // "draft", "deleted"
-}
-/* Ответ */
+
 [
     {
         "question": "Как осуществляется доставка?",
