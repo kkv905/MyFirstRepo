@@ -19,8 +19,8 @@ enum QuestionStatus {
 }
 
 
-
-async function getFaqs(req: {topicId: number; status?: QuestionStatus}): Promise<{
+// комментарий
+async function getFaqs(req: { topicId: number; status?: QuestionStatus }): Promise<{
     question: string;
     answer: string;
     tags: string[];
