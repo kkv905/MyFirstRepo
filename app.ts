@@ -21,6 +21,8 @@ enum QuestionStatus {
 
 // комментарий
 // функция 
+//
+///
 async function getFaqs(req: { topicId: number; status?: QuestionStatus }): Promise<{
     question: string;
     answer: string;
