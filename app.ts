@@ -1,39 +1,12 @@
+const skills: string[] = ['Dev', 'DevOps', 'Testing'];
 
-[
-    {
-        "question": "Как осуществляется доставка?",
-        "answer": "быстро!",
-        "tags": [
-            "popular",
-            "new"
-        ],
-        "likes": 3,
-        "status": "published"
-    }
-]
-
-enum QuestionStatus {
-    Published = 'published',
-    Draft = 'draft',
-    Deleted = 'deleted'
+for (const skill of skills) {
+    console.log(skill.toLowerCase());
 }
+console.log('')
+const res = skills
+    .filter((s: string) => s !== 'DevOps')
+    .map(s => s + '! ')
+    .reduce((a, b) => a + b);
 
-
-// комментарий
-// функция 
-//
-///
-async function getFaqs(req: { topicId: number; status?: QuestionStatus }): Promise<{
-    question: string;
-    answer: string;
-    tags: string[];
-    likes: number;
-    status: QuestionStatus
-}[]> {
-    const res = await fetch('/faqs', {
-        method: 'POST',
-        body: JSON.stringify(req)
-    });
-    const data = await res.json();
-    return data;
-}
+console.log(res);
